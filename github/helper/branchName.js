@@ -1,7 +1,7 @@
 import clipboard from "clipboardy";
 import { getInfo } from "./client.js";
 
-const issueId = process.argv[2] | null;
+const issueId = process.argv[2] || null;
 const copyToClipboard = !!process.argv[3];
 
 if (!issueId) {

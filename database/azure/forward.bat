@@ -1,0 +1,1 @@
+kubectl port-forward pods/postgresql-0 5444:5432 -n %1

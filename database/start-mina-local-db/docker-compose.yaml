@@ -1,0 +1,11 @@
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:latest
+    env_file: .env
+    ports:
+      - "${PORT}:5432"
+    volumes:
+      - type: bind
+        source: ${POSTGRES_BIND}
+        target: /var/lib/postgresql/data

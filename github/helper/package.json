@@ -1,0 +1,18 @@
+{
+  "name": "pr-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "commit.js",
+  "type": "module",
+  "scripts": {
+    "generate-pr-message": "node prMessage.js",
+    "generate-branch-name": "node branchName.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "clipboardy": "^4.0.0",
+    "dotenv": "^16.4.4"
+  }
+}

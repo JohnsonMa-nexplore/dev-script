@@ -13,7 +13,7 @@ const template = (key, summary) => {
   text.push(`**${key} - ${summary}**`);
   text.push(`[Link to Issue](https://nexplore.atlassian.net/browse/${key})`);
   text.push("");
-  text.push("**Is this a complete feature?**");
+  text.push("**Is this a standalone PR?**");
   text.push("Yes/No");
   text.push("");
   text.push("**Description**");

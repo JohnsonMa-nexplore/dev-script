@@ -1,6 +1,6 @@
 set backend_path=C:\Projects\e2ep-mina-backend
-set db_connection=postgresql://localhost:5430/hasura
-set password=password
+set db_connection=postgresql://localhost:5444/hasura
+set password=3srNazbayjqSa3PTrz8DLgpAJA3wSBo4gVzbMV1H
 
 flyway %1 ^
  -cleanDisabled="false" ^
@@ -10,3 +10,4 @@ flyway %1 ^
  -user=postgres ^
  -password=%password% ^
  -schemas=public
+ 

@@ -1,0 +1,6 @@
+{
+  "databasesInfo": "no",
+  "postgresqlServer": "pg-mina-cimic-au-prod",
+  "resourceGroup": "mina-cimic-au-prod",
+  "subscription": "mina.cimic.au.prod"
+}

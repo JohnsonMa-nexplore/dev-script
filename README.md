@@ -28,6 +28,13 @@ _But this repo contains both shell and batch script because I am a maniac_
 1. Create a local docker postgres container
 1. Migrate the database using migration files from Minerva
 
+## `database/mina-db-clone`
+
+### Core Feature:
+
+1. Create dump of database on public environment
+1. Restore the dump to development namespace
+
 ## `github/helper`
 
 > This is a NPM package, run `npm i`

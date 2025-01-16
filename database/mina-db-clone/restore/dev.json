@@ -3,6 +3,5 @@
   "dumpStorageName": "nexploreaupgdump",
   "subscription": "Nexploreworld.MINA.DEV",
   "resourceGroup": "mina-nxpl-de-dev",
-  "aksCluster": "aks-mina-nxpl-de-dev",
   "databasesInfo": "no"
 }

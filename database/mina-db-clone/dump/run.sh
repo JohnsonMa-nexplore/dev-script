@@ -6,6 +6,10 @@ case "$1" in
         dumpName="prod-cimic-$current_date_time"
         jsonFile="cimic-prod.json"
         ;;
+    ugl-prod)
+        dumpName="prod-ugl-$current_date_time"
+        jsonFile="ugl-prod.json"
+        ;;
     *)
         echo "Usage: $0 [cimic-prod]"
         exit 1

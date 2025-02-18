@@ -9,7 +9,12 @@ if (!issueId) {
 }
 
 const template = (key, summary) => {
-  return `${key}#${summary.toLowerCase().replaceAll(" ", "-")}`;
+  const branch = `${key}#${summary.toLowerCase()}`;
+  return branch
+    .replaceAll(" ", "-")
+    .replaceAll("[", "-")
+    .replaceAll("]", "-")
+    .replaceAll(/-+/gm, "-");
 };
 
 getInfo(issueId)

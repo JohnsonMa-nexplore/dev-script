@@ -9,7 +9,7 @@ if (!issueId) {
 }
 
 const template = (key, summary) => {
-  const branch = `${key}#${summary.toLowerCase()}`;
+  const branch = `${key}#${summary.trim().toLowerCase()}`;
   return branch
     .replaceAll(" ", "-")
     .replaceAll("[", "-")

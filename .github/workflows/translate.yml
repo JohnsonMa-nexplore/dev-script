@@ -29,22 +29,13 @@ jobs:
       - name: create file
         run: echo test >> test.json
 
-      # Step 5: Commit changes
-      - name: Commit changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout -b i18n-translation-update
-          git add .
-          git commit -m "SOCO: update translations via i18n:translate" || echo "No changes to commit"
-
       # Step 7: Create a pull request
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
         with:
           base: master
           token: ${{ secrets.TOKEN }}
-          branch: i18n-translation-update
+          branch: i18n-translation-update-pr
           title: "Update translations"
           body: "This PR updates translations by running the i18n:translate script."
           # labels: i18n, automation

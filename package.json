@@ -1,0 +1,14 @@
+{
+  "name": "dev-script",
+  "version": "1.0.0",
+  "description": "Development Tools/Script for enhancing the E2EP team development experience.",
+  "main": "index.js",
+  "scripts": {
+    "echo": "echo-cli Hello"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "echo-cli": "^2.0.0"
+  }
+}

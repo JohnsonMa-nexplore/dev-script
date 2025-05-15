@@ -15,6 +15,7 @@ const template = (key, summary) => {
     .replaceAll("[", "-")
     .replaceAll("]", "-")
     .replaceAll("/", "-")
+    .replaceAll("'", "-")
     .replaceAll(/-+/gm, "-");
 };
 

@@ -11,7 +11,7 @@ if (!issueId) {
 const template = (key, summary) => {
   const text = [];
   text.push(`**${key} - ${summary}**`);
-  text.push(`[Link to Issue](https://nexplore.atlassian.net/browse/${key})`);
+  // text.push(`[Link to Issue](https://nexplore.atlassian.net/browse/${key})`);
   text.push("");
   text.push("**Description**");
   text.push("Placeholder");

@@ -8,6 +8,7 @@
     "generate-pr-message": "node prMessage.js",
     "generate-branch-name": "node branchName.js",
     "generate-teams-message": "node teamsMessage.js",
+    "pending-prs": "node pendingPrs.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

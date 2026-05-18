@@ -54,3 +54,21 @@ func_ppr() {
     npm run pending-prs --silent;
     popd > /dev/null;
 }
+
+alias dev-help='func_dev_help'
+func_dev_help() {
+    echo ""
+    echo "Available commands:"
+    echo "  bn <ticket>        - Generate branch name from ticket number"
+    echo "  pr <ticket>        - Generate PR message from ticket number"
+    echo "  tpr                - Generate Teams message for current repo PRs"
+    echo "  open-pr            - Create a draft PR with auto-generated title/body"
+    echo "  commit-ticket <msg>- Commit with ticket number prefix from branch name"
+    echo "  ppr                - List pending PRs"
+    echo "  az-forward <ns>    - Port-forward to Azure PostgreSQL pod"
+    echo "  mina-dump          - Dump MINA database"
+    echo "  mina-restore       - Restore MINA database"
+    echo "  local-client       - Copy local MINA client dist path to clipboard"
+    echo "  dev-help           - Show this help message"
+    echo ""
+}

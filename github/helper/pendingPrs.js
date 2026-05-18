@@ -3,7 +3,7 @@ import { execSync } from "child_process";
 
 const prs = JSON.parse(
   execSync(
-    "gh search prs --author=@me --state=open --review=required --json number,title,url",
+    "gh search prs --author=@me --state=open --review=required --draft=false --json number,title,url",
     { encoding: "utf-8" },
   ),
 );

@@ -55,6 +55,17 @@ func_ppr() {
     popd > /dev/null;
 }
 
+alias watch-run='func_watch_run'
+func_watch_run() {
+    local branch="${1:-$(git branch --show-current)}"
+    local run_id=$(gh run list --branch "$branch" --limit 1 --json databaseId --jq '.[0].databaseId')
+    if [ -z "$run_id" ]; then
+        echo "No runs found for branch: $branch"
+        return 1
+    fi
+    gh run watch "$run_id" && terminal-notifier -title "GitHub Actions" -message "Run passed on $branch ✅" || terminal-notifier -title "GitHub Actions" -message "Run failed on $branch ❌"
+}
+
 alias dev-help='func_dev_help'
 func_dev_help() {
     echo ""
@@ -65,6 +76,7 @@ func_dev_help() {
     echo "  open-pr            - Create a draft PR with auto-generated title/body"
     echo "  commit-ticket <msg>- Commit with ticket number prefix from branch name"
     echo "  ppr                - List pending PRs"
+    echo "  watch-run [branch] - Watch the latest GitHub Actions run for a branch"
     echo "  az-forward <ns>    - Port-forward to Azure PostgreSQL pod"
     echo "  mina-dump          - Dump MINA database"
     echo "  mina-restore       - Restore MINA database"

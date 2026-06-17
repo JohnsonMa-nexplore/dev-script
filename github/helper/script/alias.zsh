@@ -26,8 +26,7 @@ func_open_pr() {
     branch_name=$(bn "$ticket")
     pr_message=$(pr "$ticket")
 
-    title=$(echo "$pr_message" | grep -o '\*\*SOCO-.*')
-    title=$(echo "$title" | tr -d '*')
+    title=$(echo "$pr_message" | head -1 | tr -d '*')
     gh pr create --fill --title "$title" --body "$pr_message" --draft
 }
 

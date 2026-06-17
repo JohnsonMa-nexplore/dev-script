@@ -26,7 +26,7 @@ const template = (key, summary) => {
 getInfo(issueId)
   .then((response) => response.json())
   .then(({ key, fields: { summary } }) => {
-    const t = template(key, summary);
+    const t = template(key, summary.trim());
     console.log(t);
     if (copyToClipboard) {
       console.log(" - Copied to clipboard -");

@@ -8,7 +8,7 @@ const url = (id) => `${baseURL}/rest/api/latest/issue/${id}`;
 let headers = new Headers();
 headers.append(
   "Authorization",
-  "Basic " + Buffer.from(username + ":" + token).toString("base64")
+  "Basic " + Buffer.from(username + ":" + token).toString("base64"),
 );
 
 export function getInfo(issueId) {
